@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="Hek-5g-LJW" id="93G-A5-jKp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tudú" id="ogj-Ag-1gH"/>
+                    <navigationItem key="navigationItem" title="Tudú" id="ogj-Ag-1gH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ofb-Cl-rGc">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="nuevoItem:" destination="Hek-5g-LJW" id="0ST-2J-J78"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybb-gk-a8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

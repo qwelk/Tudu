@@ -39,6 +39,30 @@ class TableViewController: UITableViewController {
         }
     }
     
-
+    //MARK - Añadir item
+    @IBAction func nuevoItem(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alerta = UIAlertController(title: "Nuevo item", message: nil, preferredStyle: .alert)
+        
+        let accion = UIAlertAction(title: "Añadir", style: .default) { (action) in
+            self.arrayTudus.append(textField.text!)
+            self.tableView.reloadData()
+        }
+        
+        
+        alerta.addTextField { (textFieldAlerta) in
+            textFieldAlerta.placeholder = "Crear nuevo item"
+            textField = textFieldAlerta
+            print(textField.text!)
+        }
+        
+        alerta.addAction(accion)
+        
+        present(alerta, animated: true, completion: nil)
+        
+    }
+    
 }
 
